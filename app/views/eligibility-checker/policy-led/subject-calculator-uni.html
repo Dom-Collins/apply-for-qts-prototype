@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+	<p class="govuk-phase-banner__content">
+	  <strong class="govuk-tag govuk-phase-banner__content__tag">
+		Prototype
+	  </strong>
+	  <span class="govuk-phase-banner__text">
+		This is a prototype of a new service.  <a class="govuk-link" href="subject-percentage-uni">Change view</a>.
+	  </span>
+	</p>
+  </div>
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		
+<form action="/policy-uni-calc" method="post" novalidate>
+	<h1 class="govuk-heading-xl">How much of your university degree focused on {{ data['subject-select-uni'] or 'Subject' }}?</h1>
+
+		<p>
+		Go through your university degree transcript and add up the:
+		</p>
+
+
+			<ul class="govuk-list govuk-list--bullet">
+				<li>total number of modules</li>
+				<li>number of modules that focused on {{ data['subject-select-uni'] or 'Subject' }}</li>
+				
+			  </ul>
+
+	<h2 class="govuk-heading-s">Enter totals</h1>
+			
+
+<div class="govuk-form-group">
+	<label class="govuk-label" for="width-2">
+	  Total number of modules
+	</label>
+	<input class="govuk-input govuk-input--width-2" id="width-2" name="uni-calc" type="text">
+  </div>	
+
+
+  <div class="govuk-form-group">
+	<label class="govuk-label" for="width-2">
+		Number of modules that focused on  {{ data['subject-select-uni'] or 'Subject' }}
+	</label>
+	<input class="govuk-input govuk-input--width-2" id="width-2" name="uni-calc2" type="text">
+  </div>
+
+
+  <!-- checkbox -->
+  <div class="govuk-form-group">
+	<fieldset class="govuk-fieldset">
+		<div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+			<div class="govuk-checkboxes__item">
+				<input class="govuk-checkboxes__input" id="no-degree" name="no-degree" type="checkbox" value="no-degree">
+				<label class="govuk-label govuk-checkboxes__label" for="no-degree">
+					I do not have my university degree transcript
+				</label>
+			</div>
+		</div>
+	</fieldset>
+</div>
+
+
+		<p class="govuk-body govuk-body govuk-!-padding-top-2">
+			During the application process all qualifications will be assessed to make sure they meet the subject criteria.
+		</p>
+
+
+		<details class="govuk-details" data-module="govuk-details">
+			<summary class="govuk-details__summary">
+			  <span class="govuk-details__summary-text">
+				What is a transcript?
+			  </span>
+			</summary>
+			<div class="govuk-details__text">
+				A transcript is a document that lists all the modules or subjects you studied in each year of your qualification, and the marks or grades you were awarded. 
+			</div>
+		  </details>
+
+	
+	</div>
+</div>
+
+
+
+
+
+	<div class="govuk-button-group">
+		<button class="govuk-button" data-module="govuk-button">
+			Continue
+		</button>
+		<a class="govuk-link" href="javascript:window.history.back()">Cancel</a>
+	</div>
+</form>
+
+
+
+{% endblock %}
+{% block pageScripts %}
+
+
+{% endblock %}

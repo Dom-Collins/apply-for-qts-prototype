@@ -138,7 +138,7 @@ You might be eligible to apply for QTS – {{ serviceName }} prototype
                     <p class="govuk-body">You’ll need a Secure English Language Test (SELT) at level B2 of the Common European Framework of Reference for Languages (CEFR) scale. The test must be on the list of approved English language tests and awarded within the last 2 years before the date of your application.</p>
 
                     <p class="govuk-body">Find an <a
-                            href="https://www.gov.uk/guidance/prove-your-english-language-abilities-with-a-secure-english-language-test-selt"
+                            href="/english-language-guidance"
                             class="govuk-link">approved test provider</a> if you need to get an English language certificate.</p>
 
                     <p class="govuk-body">Learn more about <a href="https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale" class="govuk-link">level B2 English language</a>.</p>
@@ -168,7 +168,17 @@ You might be eligible to apply for QTS – {{ serviceName }} prototype
                     <p class="govuk-body">You’ll need to provide the name and email address of a contact who can confirm that during your professional work experience you:</p>
 
                     <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-                        <li>worked unsupervised with children aged between 5 and 16 years</li>
+                        {% if (data['country'] == "Nigeria") or
+                        (data['country'] == "Ghana") or
+                        (data['country'] == "South Africa") or
+                        (data['country'] == "Zimbabwe") or
+                        (data['country'] == "India") or
+                        (data['country'] == "Singapore") or
+                        (data['country'] == "Jamaica") %}
+                            <li>worked unsupervised with children aged between 11 and 16 years</li>
+                        {% else %}
+                            <li>worked unsupervised with children aged between 5 and 16 years</li>
+                        {% endif %}
                         <li>were solely responsible for planning, preparing and delivering lessons to at least 4 students at a time</li>
                         <li>were solely responsible for assessing and reporting on the progress of those students</li>
                     </ul>

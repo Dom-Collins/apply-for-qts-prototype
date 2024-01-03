@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="question-other-comments" method="post">
+
+	      <div class="govuk-form-group">
+		      <fieldset class="govuk-fieldset" aria-describedby="question-applicant-suitable-hint">
+                  <span class="govuk-caption-l">Question 7 of 8</span>
+
+                  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+                  {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+                  {% set questionApplicantSuitableIncorrectHtml %}
+
+                  {{ govukTextarea({
+                  name: "questionApplicantSuitableIncorrect",
+                  id: "questionApplicantSuitableIncorrect",
+                  value: data['questionApplicantSuitableIncorrect'],
+                  label: {
+                  text: "Tell us why you answered ‘No’ to this question.",
+                  classes: "govuk-label--s",
+                  isPageHeading: false
+                  }
+                  }) }}
+
+                  {% endset -%}
+
+                  {{ govukRadios({
+                  name: "questionApplicantSuitable",
+                  fieldset: {
+                  legend: {
+                  html: "Are you satisfied that the applicant is suitable to work with children?",
+                  isPageHeading: True,
+                  classes: "govuk-fieldset__legend--l"
+                  }
+                  },
+                  items: [
+                  {
+                  value: "Yes",
+                  text: "Yes",
+                  checked: checked("['questionApplicantSuitable']", "Yes")
+                  },
+                  {
+                  value: "No",
+                  text: "No",
+                  checked: checked("['questionApplicantSuitable']", "No"),
+                  conditional: {
+                  html: questionApplicantSuitableIncorrectHtml
+                  }
+                  }
+                  ]
+                  }) }}
+
+		      </fieldset>
+	      </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

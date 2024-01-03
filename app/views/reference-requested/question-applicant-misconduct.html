@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="question-applicant-suitable" method="post">
+
+	      <div class="govuk-form-group">
+		      <fieldset class="govuk-fieldset" aria-describedby="question-applicant-misconduct-hint">
+                  <span class="govuk-caption-l">Question 6 of 8</span>
+
+                  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+                  {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+                  {% set questionApplicantMisconductIncorrectHtml %}
+
+                  {{ govukTextarea({
+                  name: "questionApplicantMisconductIncorrect",
+                  id: "questionApplicantMisconductIncorrect",
+                  value: data['questionApplicantMisconductIncorrect'],
+                  label: {
+                  text: "Tell us why you answered ‘Yes’ to this question.",
+                  classes: "govuk-label--s",
+                  isPageHeading: false
+                  }
+                  }) }}
+
+                  {% endset -%}
+
+                  {{ govukRadios({
+                  name: "questionApplicantMisconduct",
+                  fieldset: {
+                  legend: {
+                  html: "Do you know of any professional misconduct by the applicant, or any disciplinary action taken against them?",
+                  isPageHeading: True,
+                  classes: "govuk-fieldset__legend--l"
+                  }
+                  },
+                  items: [
+                  {
+                  value: "Yes",
+                  text: "Yes",
+                  checked: checked("['questionApplicantMisconduct']", "Yes"),
+                  conditional: {
+                  html: questionApplicantMisconductIncorrectHtml
+                  }
+                  },
+                  {
+                  value: "No",
+                  text: "No",
+                  checked: checked("['questionApplicantMisconduct']", "No")
+                  }
+                  ]
+                  }) }}
+		      </fieldset>
+	      </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,216 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+		<h1 class="govuk-heading-xl">
+			Proof you'll need to provide in your application
+		</h1>
+
+		<h2 class="govuk-heading-m">
+			Identity
+		</h2>
+
+		<p class="govuk-body">
+			You must provide one of the following:
+		</p>
+
+		<ul class="govuk-list govuk-list--bullet">
+			<li>passport (must not have expired)</li>
+			<li>birth certificate</li>
+			<li>national identity card that shows your date of birth and nationality (must not have expired)</li>
+		</ul>
+
+		<details class="govuk-details" data-module="govuk-details">
+			<summary class="govuk-details__summary">
+			  <span class="govuk-details__summary-text">
+				Has your name changed?
+			  </span>
+			</summary>
+			<div class="govuk-details__text">
+				You'll need to provide evidence of your name change (for example, a marriage certificate or name change deed) if your identity documents do not match.
+			</div>
+		  </details>
+
+		<h2 class="govuk-heading-m">
+			Qualifications
+		</h2>
+
+		<p class="govuk-body">	
+			You must hold a teaching qualification that’s equivalent to a UK ‘level 6’ or higher.
+			<a href="https://www.gov.uk/what-different-qualification-levels-mean/list-of-qualification-levels#:~:text=Level%206%20qualifications%20are%3A,graduate%20certificate">Check your qualification is equivalent to a level 6 or higher.</a>
+		</p>
+
+
+		<p>
+			If your qualification is equivalent to level 6, but is NOT a degree, you must also provide evidence that you hold a separate degree.
+		</p>
+
+		<p>
+			We'll need to understand the level of focus your qualifications had on developing practical teaching skills.
+		</p>
+
+		<p>
+			For any qualifications you submit, you’ll need to provide:
+		</p>
+
+		<ul class="govuk-list govuk-list--bullet">
+			<li>a certificate</li>
+			<li>a transcript (or diploma supplement)</li>
+		</ul>
+
+		<details class="govuk-details" data-module="govuk-details">
+			<summary class="govuk-details__summary">
+			  <span class="govuk-details__summary-text">
+				What is a transcript?
+			  </span>
+			</summary>
+			<div class="govuk-details__text">
+				A document that lists all the modules or subjects you studied in each year, and the grades you were awarded. Note that you must have completed all of your teaching qualification in {{ data['ECcountrySelect'] or "Ghana" }}.
+			</div>
+		  </details>
+
+
+		<h2 class="govuk-heading-m">
+			English language ability
+		</h2>
+
+		<p class="govuk-body">
+			There are 4 ways to prove your English language ability.
+		</p>
+
+		<h3 class="govuk-heading-s">1. Born in or have citizenship of an exempt country</h3>
+
+		<p>
+			If you were born in or hold citizenship of any of these listed countries, you’re exempt from English language requirements:
+		</p>
+
+		<div class="govuk-grid-row">
+			<div class="govuk-grid-column-one-half">
+				<ul class="govuk-list govuk-list--bullet">
+					<li>Antigua and Barbuda</li>
+					<li>Australia</li>
+					<li>The Bahamas</li>
+					<li>Barbados</li>
+					<li>Belize</li>
+					<li>Canada</li>
+					<li>Dominica</li>
+					<li>Grenada</li>
+					<li>Guyana</li>
+				</ul>
+			</div>
+			<div class="govuk-grid-column-one-half">
+				<ul class="govuk-list govuk-list--bullet">
+					<li>Jamaica</li>
+					<li>Ireland</li>
+					<li>Malta</li>
+					<li>New Zealand</li>
+					<li>St Kitts and Nevis</li>
+					<li>St Lucia</li>
+					<li>St Vincent and the Grenadines</li>
+					<li>Trinidad and Tobago</li>
+					<li>USA</li>
+				</ul>
+			</div>
+		</div>
+
+		<p>
+			Qualified teachers from Great Britain, Northern Ireland, Jersey and Guernsey are also exempt.
+			You’ll need to provide your passport or official identification documents for that country as proof.
+		</p>
+
+		<p>
+			If you’re not exempt by birth or citizenship, you must be able to provide evidence 
+			of your English language ability in one of the following ways:
+		</p>
+
+
+		<h3 class="govuk-heading-s">2. If you studied in an exempt country</h3>
+
+		<p>
+			Upload the transcript from your teaching qualification or university degree (which you can request from the institution where you studied). 
+			Check the exempt countries listed in ‘Born in or have citizenship of an exempt country’.
+		</p>
+
+
+		<h3 class="govuk-heading-s">3. If you studied in a country that’s NOT exempt</h3>
+
+		<p>
+			If your teaching qualification or university degree was taught exclusively in the English language you can upload an official document, which is sometimes called a Medium of Instruction (MOI).
+		</p>
+
+		<p>
+			You can request this from the institution where you studied. It must be signed and stamped by them on official headed paper and it must state that the medium of instruction was English. 
+			It must also include your name, degree title and award date.
+		</p>
+
+		<h3 class="govuk-heading-s">4. Provide an approved English language certificate</h3>
+
+		<p>
+			If you cannot provide one of the documents described in 1,2 or 3, you'll need a <a href="https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale" target="_blank">B2 level</a> Secure English Language Test (SELT) from an approved provider. 
+		</p>
+
+		<p>
+			Find an <a href="https://test.apply-for-qts-in-england.education.gov.uk/english_language_guidance" target="_blank">approved provider and SELT</a> if you need to get an English language certificate.
+		</p>
+
+		<details class="govuk-details" data-module="govuk-details">
+			<summary class="govuk-details__summary">
+			  <span class="govuk-details__summary-text">
+				What if you have more than one nationality?
+			  </span>
+			</summary>
+			<div class="govuk-details__text">
+				If you’re a national of more than 1 country and both are exempt from English language requirements, you can choose which of them you use to apply for QTS. Remember, you must be able to show a passport (or the recognised identity document for that country).
+				<br><br>
+				If you hold a second nationality that is not exempt (and you apply for QTS using that nationality) you’ll need to prove your English language proficiency using one of the other methods.
+			</div>
+		  </details>
+
+		
+		
+		  <h2 class="govuk-heading-m">
+			Recognition as a teacher
+		</h2>
+		<p>
+			As your education department or authority has an online register of teachers, 
+			you’ll also need to provide any registration numbers we need to check your record.
+		</p>
+
+		<h2 class="govuk-heading-m">
+			Work experience history
+		</h2>
+		
+		<p>
+			You need to show you’ve been employed as a teacher in a school for at least 9 months or more.
+			The teaching roles you include as proof can be from working in any country but must have occurred after becoming qualified to teach.
+		</p>
+
+		<p>
+			You’ll need to provide the name and email address of a contact who can confirm that during your professional work experience you:
+		</p>
+
+		<ul class="govuk-list govuk-list--bullet">
+			<li>worked in a school that delivers mandatory education</li>
+			<li>worked unsupervised with children aged between 5 and 16 years</li>
+			<li>were solely responsible for planning, preparing and delivering lessons to at least 4 students at a time</li>
+			<li>were solely responsible for assessing and reporting on the progress of those students</li>
+		</ul>
+
+
+		<p>
+			We’ll contact the references you’ve provided to verify your work history before we award QTS.	
+		</p>
+
+		<form action="not-in-prototype">
+		<button class="govuk-button" data-module="govuk-button">
+			Apply for QTS
+		  </button>
+		</form>
+	</div>
+</div>
+{% endblock %}

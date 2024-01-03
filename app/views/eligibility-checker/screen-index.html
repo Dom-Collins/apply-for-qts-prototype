@@ -1,0 +1,517 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Screen index – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/index.html",
+serviceName: "Manage applications for qualified teacher services (QTS)",
+serviceUrl: "/index.html",
+navigation: [
+{
+href: "/application-list.html",
+text: "Home"
+},
+{
+href: "#2",
+text: "Search"
+},
+{
+href: "#3",
+text: "Sign out"
+}
+]
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    
+    <h1 class="govuk-heading-xl">
+        Screen index
+    </h1>
+
+    <h2 class="govuk-heading-m">
+      Iteration 2 - November 2023 to xxxx
+    </h2>
+
+    <p>Prototype to be used in upcoming UR for the subject question.</p>
+
+    <h3 class="govuk-heading-s">Policy-led design</h3>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header app-custom-class">Link</th>
+          <th scope="col" class="govuk-table__header app-custom-class govuk-!-width-two-thirds">Description</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <p><a href="launch">Launch prototype for UR</a></p>
+          </td>
+          <td class="govuk-table__cell">
+            <p>New screen.</p>
+            <p>UR only. This is to pick a scenario. Scenario 1 is policy-led, scenario 2 is UCD.</p>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <p><a href="policy-led/question-subject-list">Subject question (routing page)</a></p>
+          </td>
+          <td class="govuk-table__cell">
+            <p>New screen.</p>
+            <p>This is the new routing page with three options to redirect the users.</p>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <p><a href="policy-led/select-subject">Select subject (teaching qual)</a></p>
+          </td>
+          <td class="govuk-table__cell">
+            <p>New screen.</p>
+            <p>If the user answers 'Part of my teaching qualification focused on one of these subjects'</p>
+          </td>
+        </tr>
+
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <p><a href="policy-led/subject-percentage">Select percentage (teaching qual)</a></p>
+          </td>
+          <td class="govuk-table__cell">
+            <p>New screen.</p>
+            <p>The 'two step transcript' design (radios).<br>
+            There is a link in the phase banner that allows you to switch the view to the calculator screen.
+          </p>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <p><a href="policy-led/subject-calculator">Calculate percentage (teaching qual)</a></p>
+          </td>
+          <td class="govuk-table__cell">
+            <p>New screen.</p>
+            <p>The 'calculator' design (input boxes).
+              <br>
+            There is a link in the phase banner that allows you to switch the view to the two step transcript design.
+            </p>
+          </td>
+        </tr>
+
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <p><a href="policy-led/question-degree">Degree question</a></p>
+          </td>
+          <td class="govuk-table__cell">
+            <p>The existing screen</p>
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <p><a href="policy-led/ineligible-uni-degree">Degree ineligible screen</a></p>
+          </td>
+          <td class="govuk-table__cell">
+            <p>New screen.</p>
+      
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <p><a href="policy-led/select-subject-uni-degree">Select subject (university degree)</a></p>
+              </td>
+              <td class="govuk-table__cell">
+                <p>New screen.</p>
+                <p>Continues from 'do you have a university degree' question.</p>
+              </td>
+            </tr>
+    
+    
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <p><a href="policy-led/subject-percentage-uni">Select percentage (university degree)</a></p>
+              </td>
+              <td class="govuk-table__cell">
+                <p>New screen.</p>
+                <p>The 'two step transcript' design (radios).<br>
+                There is a link in the phase banner that allows you to switch the view to the calculator screen.
+              </p>
+              </td>
+            </tr>
+    
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <p><a href="policy-led/subject-calculator-uni">Calculate percentage (university degree)</a></p>
+              </td>
+              <td class="govuk-table__cell">
+                <p>New screen.</p>
+                <p>The 'calculator' design (input boxes).
+                  <br>
+                There is a link in the phase banner that allows you to switch the view to the two step transcript design.
+                </p>
+              </td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <p><a href="policy-led/question-age-range">Age range</a></p>
+              </td>
+              <td class="govuk-table__cell">
+                <p>The existing screen.</p>
+              
+              </td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <p><a href="interstitial">Interstitial screen</a></p>
+              </td>
+              <td class="govuk-table__cell">
+                <p>UR only. Links both scenarios.</p>
+              
+              </td>
+            </tr>
+    
+          </td>
+        </tr>
+
+      </tbody>
+      </table>
+   
+
+
+      <h3 class="govuk-heading-s">UCD-led design</h3>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header app-custom-class">Link</th>
+          <th scope="col" class="govuk-table__header app-custom-class govuk-!-width-two-thirds">Description</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <p><a href="ucd-led/question-subject">Select subject autocomplete</a></p>
+          </td>
+          <td class="govuk-table__cell">
+            <p>New screen.</p>
+
+            <p>Subject selector for teaching qualification.</p>
+           
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <p><a href="ucd-led/not-in-list">My subject is not on the list</a></p>
+          </td>
+          <td class="govuk-table__cell">
+            <p>New screen.</p>
+
+            <p>Modules question</p>
+           
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <p><a href="ucd-led/question-subject-uni">Degree question</a></p>
+          </td>
+          <td class="govuk-table__cell">
+            <p>New screen.</p>
+
+            <p>University degree question</p>
+           
+          </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <p><a href="ucd-led/question-age-range">Age range</a></p>
+          </td>
+          <td class="govuk-table__cell">
+            <p>The existing screen</p>
+          </td>
+        </tr>
+  
+      </tbody>
+    </table>
+
+
+
+
+       
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <h2 class="govuk-heading-m">
+      Iteration 1 - September to November 2023
+    </h2>
+
+  <p class="govuk-body govuk-!-padding-bottom-3">
+    These screens were used in UR.
+    <br><br>
+    <a href="https://educationgovuk.sharepoint.com/:p:/r/sites/lvewp00436/WorkplaceDocuments/Qualifications%20Team/New%20recognition%20service/Professional%20Recognition%20Service%20Team/Beta/User%20Research/Playbacks/Playback%20Slides/Eligibility%20Check%20-%20UR%20Playback.pptx?d=w2d6a3402191b42a6b953aed4905263c4&csf=1&web=1&e=APy4y0" target="blank">
+    Research playback deck (28th November)
+  </a>
+  </p>
+  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section">    
+  <div class="govuk-accordion__section-header">
+    <h2 class="govuk-accordion__section-heading">
+      <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+        Show overview of screens
+      </span>
+    </h2>
+  </div>
+  <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+  
+
+    <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header app-custom-class">Link</th>
+            <th scope="col" class="govuk-table__header app-custom-class govuk-!-width-two-thirds">Description</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <p><a href="test-start">Research setup</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p>Initial page where applicants can pick their country.</p>
+              <p>This dynamically updates some content on the detailed end page.</p>
+            </td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <p><a href="start">New start page</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p>The redesigned start page of the service</p>
+            </td>
+          </tr>
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <p><a href="end-simple">New end page</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p>The end page of the service. This is where the user lands if they are eligible for QTS.</p>
+            </td>
+          </tr>
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <p><a href="end-detailed">Detailed guidance page</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p>The redesigned guidance page.</p>
+            </td>
+          </tr>
+        </tbody>
+        </table>
+     
+
+
+        <h2 class="govuk-heading-m govuk-!-padding-bottom-1 govuk-!-padding-top-3">
+          Subject question
+      </h2>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header app-custom-class">Link</th>
+              <th scope="col" class="govuk-table__header app-custom-class govuk-!-width-two-thirds">Description</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <p><a href="question-subject">Autocomplete search</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p>Autocomplete design</p>
+              <p>Select 'My subject is not on the list' to demo the design from the Lucid Board</p>
+            </td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <p><a href="question-subject-select">Subject question (autocomplete 2 pager)</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p>Autocomplete design split over 2 pages</p>
+            </td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <p><a href="question-subject-dropdown">Dropdown</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p>Dropdown design</p>
+              <p>Select 'My subject is not on the list' to demo the design from the Lucid Board</p>
+            </td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <p><a href="question-subject-list">List</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p>List of subjects design</p>
+            </td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <p><a href="question-subject-add-another">Add another (search)</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p>Subject question with 'add another' component</p>
+            </td>
+          </tr>
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <p><a href="question-subject-3">Autocomplete: 3 subjects</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p>Subject question with 3 stacked autocomplete searches</p>
+            </td>
+          </tr>
+        </tbody>
+        </table>
+
+
+        <h2 class="govuk-heading-m govuk-!-padding-bottom-1 govuk-!-padding-top-3">
+         Age range question
+      </h2>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header app-custom-class">Link</th>
+              <th scope="col" class="govuk-table__header app-custom-class govuk-!-width-two-thirds">Description</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <p><a href="question-age-range">V1 (input fields)</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p>Version with two input fields for age range.</p>
+            
+            </td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <p><a href="question-age-range-v2">V2 (radios)</a></p>
+            </td>
+            <td class="govuk-table__cell">
+              <p>Age range selection with radio buttons</p>
+            </td>
+          </tr>
+        </tbody>
+        </table>
+
+
+        <h2 class="govuk-heading-m govuk-!-padding-bottom-1 govuk-!-padding-top-3">
+          Work experience question
+       </h2>
+ 
+         <table class="govuk-table">
+           <thead class="govuk-table__head">
+             <tr class="govuk-table__row">
+               <th scope="col" class="govuk-table__header app-custom-class">Link</th>
+               <th scope="col" class="govuk-table__header app-custom-class govuk-!-width-two-thirds">Description</th>
+             </tr>
+           </thead>
+           <tbody class="govuk-table__body">
+ 
+           <tr class="govuk-table__row">
+             <td class="govuk-table__cell">
+               <p><a href="question-work-experience-radios">V1 (radios)</a></p>
+             </td>
+             <td class="govuk-table__cell">
+               <p>Same as live, updated content</p>
+             
+             </td>
+           </tr>
+ 
+           <tr class="govuk-table__row">
+             <td class="govuk-table__cell">
+               <p><a href="question-work-experience-input">V2 (input)</a></p>
+             </td>
+             <td class="govuk-table__cell">
+               <p>Changing the radios to a free input (placeholder content)</p>
+             </td>
+
+             <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <p><a href="question-work-experience-induction">V3 (input)</a></p>
+              </td>
+              <td class="govuk-table__cell">
+                <p>Includes statutory induction text</p>
+              </td>
+            </tr>
+           </tr>
+         </tbody>
+         </table>
+
+
+         <h2 class="govuk-heading-m govuk-!-padding-bottom-1 govuk-!-padding-top-3">
+          Sanctions/misconduct question
+       </h2>
+ 
+         <table class="govuk-table">
+           <thead class="govuk-table__head">
+             <tr class="govuk-table__row">
+               <th scope="col" class="govuk-table__header app-custom-class">Link</th>
+               <th scope="col" class="govuk-table__header app-custom-class govuk-!-width-two-thirds">Description</th>
+             </tr>
+           </thead>
+           <tbody class="govuk-table__body">
+ 
+           <tr class="govuk-table__row">
+             <td class="govuk-table__cell">
+               <p><a href="question-misconduct">Sanctions</a></p>
+             </td>
+             <td class="govuk-table__cell">
+               <p>The existing screen</p>
+             
+             </td>
+            </tr>
+         </tbody>
+         </table>
+  </div>
+  </div>
+  </div>
+
+    
+    </div>
+</div>
+
+{% endblock %}
